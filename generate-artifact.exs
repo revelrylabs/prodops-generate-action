@@ -44,7 +44,7 @@ params = %{
 # write the outputs
 output_file = System.get_env("GITHUB_OUTPUT")
 {:ok, handle} = File.open(output_file, [:append])
-IO.write(handle, "artifact_url=#{artifact_url}")
+IO.write(handle, "artifact_url=#{artifact_url}\n")
 
 IO.write(handle, """
 artifact_content<<ARTIFACT_EOF
