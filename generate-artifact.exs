@@ -3,7 +3,11 @@ Mix.install([
 ])
 
 prodops_api_key = System.get_env("INPUT_PRODOPS_API_KEY")
-prodops_api_url = System.get_env("INPUT_PRODOPS_API_URL", "https://app.prodops.ai")
+prodops_api_url = System.get_env("INPUT_PRODOPS_API_URL")
+
+prodops_api_url =
+  if prodops_api_url in [nil, ""], do: "https://app.prodops.ai", else: prodops_api_url
+
 prompt_template_id = "INPUT_PROMPT_TEMPLATE_ID" |> System.get_env() |> String.to_integer()
 project_id = "INPUT_PROJECT_ID" |> System.get_env() |> String.to_integer()
 artifact_type_slug = System.get_env("INPUT_ARTIFACT_TYPE_SLUG")
