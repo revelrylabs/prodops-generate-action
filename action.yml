@@ -17,6 +17,9 @@ inputs:
   artifact-type-slug:
     description: TODO
     required: true
+  prompt-template-id:
+    description: The ID of the prompt template to use
+    required: true
   input-count:
     description: TODO
     required: true

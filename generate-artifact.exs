@@ -27,10 +27,12 @@ params = %{
   project_id: project_id
 }
 
+# TODO: make the URL an option we can pass to the action
 Application.put_env(:prodops_ex, :api_key, prodops_api_key)
 Application.put_env(:prodops_ex, :api_url, "https://beta.prodops.ai")
 
-{:ok, %{response: %{"artifact" => %{"id" => artifact_id}, "url" => artifact_url}}} = ProdopsEx.Artifact.create(params)
+{:ok, %{response: %{"artifact" => %{"id" => artifact_id}, "url" => artifact_url}}} =
+  ProdopsEx.Artifact.create(params)
 
 IO.inspect(artifact_id, label: "artifact_id")
 IO.inspect(artifact_url, label: "url")
