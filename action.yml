@@ -1,0 +1,52 @@
+name: "Generate an Artifact with ProdOps"
+description: "Generate an Artifact with ProdOps"
+author: ProdOps
+branding:
+  icon: "upload-cloud"
+  color: "purple"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+inputs:
+  prodops-api-key:
+    description: Your ProdOps API key
+    required: true
+  project-id:
+    description: The ID of the ProdOps project to generate your artifact in
+    required: true
+  artifact-type-slug:
+    description: TODO
+    required: true
+  input-count:
+    description: TODO
+    required: true
+  input-1-name:
+    description: TODO
+    required: false
+  input-1-value:
+    description: TODO
+    required: false
+  input-2-name:
+    description: TODO
+    required: false
+  input-2-value:
+    description: TODO
+    required: false
+  input-3-name:
+    description: TODO
+    required: false
+  input-3-value:
+    description: TODO
+    required: false
+  input-4-name:
+    description: TODO
+    required: false
+  input-4-value:
+    description: TODO
+    required: false
+  input-5-name:
+    description: TODO
+    required: false
+  input-5-value:
+    description: TODO
+    required: false
