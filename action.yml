@@ -11,6 +11,9 @@ inputs:
   prodops_api_key:
     description: Your ProdOps API key
     required: true
+  prodops_api_url:
+    description: The ProdOps API endpoint to use. Defaults to https://app.prodops.ai
+    required: false
   project_id:
     description: The ID of the ProdOps project to generate your artifact in
     required: true

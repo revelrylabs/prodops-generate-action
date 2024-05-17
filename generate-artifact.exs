@@ -3,6 +3,7 @@ Mix.install([
 ])
 
 prodops_api_key = System.get_env("INPUT_PRODOPS_API_KEY")
+prodops_api_url = System.get_env("INPUT_PRODOPS_API_URL", "https://app.prodops.ai")
 prompt_template_id = "INPUT_PROMPT_TEMPLATE_ID" |> System.get_env() |> String.to_integer()
 project_id = "INPUT_PROJECT_ID" |> System.get_env() |> String.to_integer()
 artifact_type_slug = System.get_env("INPUT_ARTIFACT_TYPE_SLUG")
@@ -27,9 +28,8 @@ params = %{
   project_id: project_id
 }
 
-# TODO: make the URL an option we can pass to the action
 Application.put_env(:prodops_ex, :api_key, prodops_api_key)
-Application.put_env(:prodops_ex, :api_url, "https://beta.prodops.ai")
+Application.put_env(:prodops_ex, :api_url, prodops_api_url)
 
 {:ok, %{response: %{"artifact" => %{"id" => artifact_id}, "url" => artifact_url}}} =
   ProdopsEx.Artifact.create(params)
