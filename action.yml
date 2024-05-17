@@ -7,6 +7,11 @@ branding:
 runs:
   using: "docker"
   image: "Dockerfile"
+outputs:
+  artifact_content:
+    description: "The content of the generated artifact"
+  artifact_url:
+    description: "The URL of the generated artifact"
 inputs:
   prodops_api_key:
     description: Your ProdOps API key
