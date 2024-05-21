@@ -23,41 +23,41 @@ inputs:
     description: The ID of the ProdOps project to generate your artifact in
     required: true
   artifact_type_slug:
-    description: TODO
+    description: The slug for the artifact type you want to generate, visible if you edit the artifact type in the ProdOps web UI
     required: true
   prompt_template_id:
-    description: The ID of the prompt template to use
+    description: The ID of the prompt template to use when generating. Must match the artifact type
     required: true
   input_count:
-    description: TODO
+    description: The number of inputs required by your prompt template, visible in the prompt template editing UI
     required: true
   input_1_name:
-    description: TODO
+    description: If `input_count` is >= 1, the name of the first input
     required: false
   input_1_value:
-    description: TODO
+    description: If `input_count` is >= 1, the value to use in the first input
     required: false
   input_2_name:
-    description: TODO
+    description: If `input_count` is >= 2, the name of the second input
     required: false
   input_2_value:
-    description: TODO
+    description: If `input_count` is >= 2, the value to use in the second input
     required: false
   input_3_name:
-    description: TODO
+    description: If `input_count` is >= 3, the name of the third input
     required: false
   input_3_value:
-    description: TODO
+    description: If `input_count` is >= 3, the value to use in the third input
     required: false
   input_4_name:
-    description: TODO
+    description: If `input_count` is >= 4, the name of the fourth input
     required: false
   input_4_value:
-    description: TODO
+    description: If `input_count` is >= 4, the value to use in the fourth input
     required: false
   input_5_name:
-    description: TODO
+    description: If `input_count` is >= 5, the name of the fifth input
     required: false
   input_5_value:
-    description: TODO
+    description: If `input_count` is >= 5, the value to use in the fifth input
     required: false
