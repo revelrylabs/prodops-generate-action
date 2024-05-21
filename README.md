@@ -40,7 +40,7 @@ A GitHub action to generate an artifact using ProdOps. You can use this in your 
 
 You can incorporate the ProdOps action into your own GitHub Workflows in any way you like. This example workflow will generate a `code_review` artifact (into project `456` using prompt template `123`) every time a new pull request is created:
 
-```
+```yaml
 name: Automated Code Review
 on:
   pull_request:
